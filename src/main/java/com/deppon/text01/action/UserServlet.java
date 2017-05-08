@@ -23,6 +23,8 @@ public class UserServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 
 		printHeader(request);
+		
+		String action = request.getParameter("action");
 
 		if ("login_input".equals(action)) {
 			request.getRequestDispatcher("login.jsp")
